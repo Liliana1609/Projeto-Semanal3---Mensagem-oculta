@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./image/criptografia.png">
+  <link rel="stylesheet" href="./sprint.css">
+  <title>Criptografia</title>
+</head>
+
+<body>
+  <h1>Criptografe, escolha entre César ou Base64!</h1>
+  <div class="conjunto">
+    <div class="cifracesar">
+      <img src="./image/cesar.jpg" width="350" height="450">
+    </div>
+
+    <form class="forms" name="formulario">
+      <fieldset>
+        <legend><b>Criptografando Mensagens</b></legend>
+
+        <div class="inicio">
+          <input type="text" name="texto" id="texto" class="inputText" placeholder="Digite sua mensagem" />
+        </div>
+
+        <div class="metodo">
+          <label for="option">Escolha o método</label>
+          <select name="chooseCif" class="chooseCif" id="chooseCif" required>
+            <option value="semValor" id="semValor" disabled selected></option>
+            <option value="cCesar" id="cCesar">Cifra de César</option>
+            <option value="Base64" id="base64">Base64</option>
+          </select>
+        </div>
+        <div class="incremt" style="display: none" id="dadosIncrem">
+          <p>Incremento da chave</p>
+          <input type="number" class="inputIncremt" id="numIncrem" default="0" min="1" value="1" />
+        </div>
+
+        <div class="cripto">
+          <input type="radio" name="cripto" id="codificar" class="codBtn" value="codificar" />
+          <label for="codificar">Codificar</label>
+          <input type="radio" name="cripto" id="decodificar" class="codBtn" value="decodificar" />
+          <label for="decodificar">Decodificar</label>
+        </div>
+
+        <div class="cifbtn">
+          <button type="submit" class="btn" name="cifMsg" id="submit">Codificar/Decodificar</button>
+        </div>
+
+        <div class="fim">
+          <textarea disabled class="fimText" id="fimTexto" placeholder="O resultado será gerado aqui"></textarea>
+        </div>
+      </fieldset>
+    </form>
+    <div class="cifrabase">
+      <img src="./image/base64.jpg" width="350" height="450">
+    </div>
+  </div>
+  <script src="./sprint.js"></script>
+</body>
+
+</html>
